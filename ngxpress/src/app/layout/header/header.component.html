@@ -1,0 +1,23 @@
+<header class="bg-blue-900 text-white shadow px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+        <button mat-icon-button (click)="onToggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="text-lg font-semibold">NgXpress Admin</h1>
+    </div>
+
+    <!-- Profile dropdown -->
+    <div class="relative" (click)="toggleMenu()" tabindex="0">
+        <div class="flex items-center gap-2 cursor-pointer">
+            <mat-icon>account_circle</mat-icon>
+            <span class="text-sm font-medium">Admin</span>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+
+        <div *ngIf="menuOpen" class="absolute right-0 mt-2 bg-white text-black shadow rounded w-48 z-10">
+            <a class="block px-4 py-2 hover:bg-gray-100" href="#">View Profile</a>
+            <a class="block px-4 py-2 hover:bg-gray-100" href="#">Settings</a>
+            <a class="block px-4 py-2 hover:bg-gray-100 text-red-500" href="#">Logout</a>
+        </div>
+    </div>
+</header>

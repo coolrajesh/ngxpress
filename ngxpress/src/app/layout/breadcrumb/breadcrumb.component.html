@@ -1,0 +1,7 @@
+<div class="flex items-center gap-2 px-6 py-2 text-sm text-white bg-blue-700 shadow">
+    <mat-icon class="text-yellow-400">home</mat-icon>
+    <ng-container *ngFor="let item of breadcrumb; let last = last">
+        <span class="capitalize">{{ item }}</span>
+        <mat-icon *ngIf="!last" class="text-sm">chevron_right</mat-icon>
+    </ng-container>
+</div>

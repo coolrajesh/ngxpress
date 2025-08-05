@@ -1,0 +1,14 @@
+<aside [ngClass]="collapsed ? 'w-20' : 'w-64'"
+    class="bg-blue-800 text-white h-screen p-4 flex flex-col transition-all duration-300">
+
+    <a routerLink="/dashboard" class="flex items-center gap-3 py-2 px-3 rounded hover:bg-blue-700"
+        matTooltip="Dashboard">
+        <mat-icon class="text-yellow-400">dashboard</mat-icon>
+        <span *ngIf="!collapsed">Dashboard</span>
+    </a>
+
+    <a routerLink="/users" class="flex items-center gap-3 py-2 px-3 rounded hover:bg-blue-700" matTooltip="Users">
+        <mat-icon class="text-yellow-400">group</mat-icon>
+        <span *ngIf="!collapsed">Users</span>
+    </a>
+</aside>
